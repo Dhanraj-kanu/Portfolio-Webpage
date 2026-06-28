@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dhanraj Kanu | Portfolio | Full Stack Developer & Data Analyst</title>
+  <meta name="description"
+    content="Portfolio of Dhanraj Kanu – Full Stack Developer and Data Science specialist (CGPA: 9.8). Expert in MERN stack, Next.js, and AI solutions." />
+  <meta name="keywords"
+    content="Dhanraj Kanu, Dhanraj, Kanu, Portfolio, Data Science, MERN Stack, Next.js, BCA, SR University, ShopSphere, GymPro, Arvin Fruits Store" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dhanraj Kanu | Portfolio" />
+  <meta property="og:description"
+    content="Full Stack Developer & Data Science Specialist specializing in Next.js, MERN stack, and AI-powered solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.danny.page.gd/" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Tailwind CSS via Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            heading: ["Plus Jakarta Sans", "sans-serif"],
+            code: ["Space Grotesk", "monospace"]
+          },
+          colors: {
+            brand: {
+              50: "#f5f3ff",
+              100: "#ede9fe",
+              500: "#2563eb", /* Blue */
+              600: "#1d4ed8",
+              700: "#1e40af",
+              900: "#1e3a8a"
+            },
+            accent: {
+              500: "#10b981", /* Emerald */
+              600: "#059669"
+            },
+            surface: {
+              light: "#ffffff",
+              dark: "#0b1220"
+            }
+          },
+          boxShadow: {
+            glow: "0 0 20px rgba(37, 99, 235, 0.15)",
+            'glow-lg': "0 0 35px rgba(37, 99, 235, 0.25)"
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(11, 18, 32, 0.05);
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: rgba(11, 18, 32, 0.3);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(37, 99, 235, 0.3);
+      border-radius: 999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(37, 99, 235, 0.6);
+    }
+
+    /* Glassmorphism effects */
+    .glass-nav {
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background-color: rgba(255, 255, 255, 0.7);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .dark .glass-nav {
+      background-color: rgba(11, 18, 32, 0.7);
+      border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+    }
+
+    .glass-card {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(226, 232, 240, 0.6);
+    }
+
+    .dark .glass-card {
+      background-color: rgba(15, 23, 42, 0.4);
+      border: 1px solid rgba(51, 65, 85, 0.3);
+    }
+
+    /* Magnetic Cursor Follower */
+    #cursor-follower {
+      width: 24px;
+      height: 24px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1.5px solid rgba(37, 99, 235, 0.5);
+      pointer-events: none;
+      z-index: 9999;
+      transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s, border-color 0.3s, opacity 0.3s;
+      transform: translate(-50%, -50%);
+      position: fixed;
+      mix-blend-mode: difference;
+    }
+    
+    #cursor-follower.hover-magnet {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.9);
+      border-color: transparent;
+      mix-blend-mode: difference;
+    }
+
+    
+
+    /* Neon Gradient Border */
+    .neon-border {
+      position: relative;
+    }
+    .neon-border::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #3b82f6, #10b981, #8b5cf6, #3b82f6);
+      background-size: 300% 100%;
+      animation: neon-flow 3s linear infinite;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .neon-border:hover::before {
+      opacity: 1;
+    }
+    @keyframes neon-flow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* Parallax Elements */
+    .parallax-item {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Background blobs */
+    .blob {
+      filter: blur(80px);
+      will-change: transform;
+      animation: float 20s infinite alternate;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(40px, -60px) scale(1.2);
+      }
+
+      100% {
+        transform: translate(-30px, 30px) scale(0.9);
+      }
+    }
+
+    /* Timeline style custom path line */
+    .timeline-line::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #2563eb, #10b981, transparent);
+    }
+
+    @media (min-width: 768px) {
+      .timeline-line::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Text gradient helper */
+    .text-gradient-primary {
+      background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .dark .text-gradient-primary {
+      background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Glitch Effect */
+    .glitch-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .glitch {
+      position: relative;
+      color: inherit;
+    }
+    .glitch::before, .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      opacity: 0.8;
+    }
+    .glitch::before {
+      left: 2px;
+      text-shadow: -2px 0 red;
+      clip: rect(24px, 550px, 90px, 0);
+      animation: glitch-anim 3s infinite linear alternate-reverse;
+    }
+    .glitch::after {
+      left: -2px;
+      text-shadow: -2px 0 blue;
+      clip: rect(85px, 550px, 140px, 0);
+      animation: glitch-anim 2.5s infinite linear alternate-reverse;
+    }
+    @keyframes glitch-anim {
+      0% { clip: rect(10px, 9999px, 86px, 0); }
+      5% { clip: rect(69px, 9999px, 66px, 0); }
+      10% { clip: rect(16px, 9999px, 85px, 0); }
+      15% { clip: rect(31px, 9999px, 57px, 0); }
+      20% { clip: rect(65px, 9999px, 64px, 0); }
+      25% { clip: rect(98px, 9999px, 54px, 0); }
+      30% { clip: rect(15px, 9999px, 80px, 0); }
+      35% { clip: rect(48px, 9999px, 16px, 0); }
+      40% { clip: rect(63px, 9999px, 7px, 0); }
+      45% { clip: rect(27px, 9999px, 34px, 0); }
+      50% { clip: rect(34px, 9999px, 20px, 0); }
+      55% { clip: rect(10px, 9999px, 52px, 0); }
+      60% { clip: rect(81px, 9999px, 10px, 0); }
+      65% { clip: rect(61px, 9999px, 67px, 0); }
+      70% { clip: rect(41px, 9999px, 6px, 0); }
+      75% { clip: rect(14px, 9999px, 14px, 0); }
+      80% { clip: rect(2px, 9999px, 37px, 0); }
+      85% { clip: rect(74px, 9999px, 99px, 0); }
+      90% { clip: rect(11px, 9999px, 52px, 0); }
+      95% { clip: rect(72px, 9999px, 29px, 0); }
+      100% { clip: rect(46px, 9999px, 63px, 0); }
+    }
+  </style>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Vanilla-tilt.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+</head>
+
+<body
+  class="bg-slate-50 text-slate-800 dark:bg-surface-dark dark:text-slate-100 font-sans transition-colors duration-300 relative overflow-x-hidden"
+  id="top">
+
+  <!-- Parallax Floating Elements -->
+  <svg class="parallax-item text-brand-500/10 w-32 h-32 top-40 left-10" data-speed="0.2" viewBox="0 0 100 100" fill="currentColor">
+    <polygon points="50,15 90,85 10,85" />
+  </svg>
+  <svg class="parallax-item text-emerald-500/10 w-24 h-24 top-[800px] right-20" data-speed="-0.3" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4">
+    <circle cx="50" cy="50" r="40" />
+  </svg>
+  <svg class="parallax-item text-indigo-500/10 w-40 h-40 top-[1600px] left-1/4" data-speed="0.1" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+    <rect x="20" y="20" width="60" height="60" transform="rotate(45 50 50)" />
+  </svg>
+
+  <!-- PARTICLES BACKGROUND -->
+  <div id="particles-js" class="absolute top-0 inset-x-0 h-screen z-0"></div>
+
+  <!-- CURSOR FOLLOWER (Desktop only) -->
+  <div id="cursor-follower" class="fixed rounded-full hidden md:block opacity-0"></div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scrollProgress"
+    class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-500 via-blue-400 to-accent-500 z-[120] transition-all duration-75 w-0">
+  </div>
+
+  <!-- PAGE LOADER -->
+  <div id="loader"
+    class="fixed inset-0 z-[150] flex items-center justify-center bg-white dark:bg-surface-dark transition-all duration-500">
+    <div class="relative flex flex-col items-center">
+      <div
+        class="h-20 w-20 rounded-full border-4 border-slate-200 dark:border-slate-800 border-t-brand-500 animate-spin">
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center font-heading font-bold text-sm text-brand-500">DK
+      </div>
+      <span
+        class="mt-4 font-heading font-medium tracking-widest text-xs uppercase animate-pulse text-slate-500 dark:text-slate-400">Loading
+        Portfolio</span>
+    </div>
+  </div>
+
+  <!-- FLOATING NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 w-full transition-all duration-300">
+    <nav class="glass-nav py-3 transition-all duration-300">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-12 items-center justify-between">
+          <a href="#top" class="flex items-center gap-2.5 font-heading font-extrabold text-xl tracking-tight group">
+            <span
+              class="inline-block h-9 w-9 rounded-xl bg-gradient-to-tr from-brand-600 to-accent-500 text-white grid place-items-center shadow-lg group-hover:rotate-6 transition duration-300">DK</span>
+            <span class="relative overflow-hidden block">
+              <span class="block transition duration-300 group-hover:-translate-y-full">Dhanraj Kanu</span>
+              <span
+                class="absolute top-0 left-0 block text-brand-500 transition duration-300 translate-y-full group-hover:translate-y-0">Back
+                to Top</span>
+            </span>
+          </a>
+
+          <!-- Desktop menu -->
+          <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
+            <a href="#about"
+              class="hover:text-brand-500 transition-colors py-1.5 border-b-2 border-transparent hover:border-brand-500">About</a>
+            <a href="#skills"
+              class="hover:text-brand-500 transition-colors py-1.5 border-b-2 border-transparent hover:border-brand-500">Skills</a>
+            <a href="#experience"
+              class="hover:text-brand-500 transition-colors py-1.5 border-b-2 border-transparent hover:border-brand-500">Journey</a>
+            <a href="#projects"
+              class="hover:text-brand-500 transition-colors py-1.5 border-b-2 border-transparent hover:border-brand-500">Projects</a>
+            <a href="#certifications"
+              class="hover:text-brand-500 transition-colors py-1.5 border-b-2 border-transparent hover:border-brand-500">Credentials</a>
+            <a href="#contact"
+              class="hover:text-brand-500 transition-colors py-1.5 border-b-2 border-transparent hover:border-brand-500">Contact</a>
+
+            <span class="h-4 w-px bg-slate-200 dark:bg-slate-800"></span>
+
+            <button id="themeToggle" aria-label="Toggle dark mode"
+              class="rounded-xl p-2 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200/50 dark:border-slate-800/50 transition duration-300">
+              <i data-lucide="sun" class="h-4.5 w-4.5 block dark:hidden"></i>
+              <i data-lucide="moon" class="h-4.5 w-4.5 hidden dark:block"></i>
+            </button>
+            <a href="#contact"
+              class="rounded-xl bg-gradient-to-r from-brand-500 to-blue-600 px-4 py-2 text-white font-medium hover:shadow-glow hover:translate-y-[-1px] transition-all duration-300">Hire
+              Me</a>
+          </div>
+
+          <!-- Mobile menu control -->
+          <div class="flex items-center gap-3 md:hidden">
+            <button id="themeToggleMobile"
+              class="rounded-xl p-2 border border-slate-200/50 dark:border-slate-800/50 transition">
+              <i data-lucide="sun" class="h-4.5 w-4.5 block dark:hidden"></i>
+              <i data-lucide="moon" class="h-4.5 w-4.5 hidden dark:block"></i>
+            </button>
+            <button id="menuBtn"
+              class="rounded-xl p-2 border border-slate-200/50 dark:border-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800"
+              aria-label="Open menu">
+              <i data-lucide="menu" class="h-5 w-5 block" id="menuIcon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu sheet -->
+    <div id="mobileMenu"
+      class="md:hidden hidden border-b border-slate-200/80 dark:border-slate-800/50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg">
+      <div class="mx-auto max-w-6xl px-4 py-4 flex flex-col gap-4 text-base font-semibold">
+        <a href="#about" class="hover:text-brand-500 transition py-1" onclick="closeMenu()">About</a>
+        <a href="#skills" class="hover:text-brand-500 transition py-1" onclick="closeMenu()">Skills</a>
+        <a href="#experience" class="hover:text-brand-500 transition py-1" onclick="closeMenu()">Journey</a>
+        <a href="#projects" class="hover:text-brand-500 transition py-1" onclick="closeMenu()">Projects</a>
+        <a href="#certifications" class="hover:text-brand-500 transition py-1" onclick="closeMenu()">Credentials</a>
+        <a href="#contact" class="hover:text-brand-500 transition py-1" onclick="closeMenu()">Contact</a>
+        <a href="#contact" class="w-full text-center rounded-xl bg-brand-500 py-2.5 text-white font-medium block"
+          onclick="closeMenu()">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-12 gap-12 items-center">
+
+        <!-- Hero Text -->
+        <div class="md:col-span-7" data-aos="fade-right" data-aos-duration="800">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-brand-500/20 bg-brand-500/10 px-3 py-1 text-xs font-semibold text-brand-600 dark:text-brand-400 mb-6">
+            <span class="flex h-2 w-2 rounded-full bg-green-500 animate-ping"></span>
+            Eager to Relocate to Bengaluru 🇮🇳
+          </div>
+          <h1 class="text-4xl sm:text-6xl font-heading font-extrabold leading-[1.1] tracking-tight">
+            Hi, I'm <span class="glitch-wrapper"><span class="glitch text-gradient-primary" data-text="Dhanraj Kanu">Dhanraj Kanu</span></span> 👨‍💻
+          </h1>
+          <h2 class="mt-4 text-lg sm:text-xl font-heading font-medium text-slate-500 dark:text-slate-400">
+            <span id="typing"
+              class="text-brand-500 dark:text-blue-400 font-bold font-code pr-1 relative after:content-['█'] after:text-brand-500 dark:after:text-green-400 after:animate-pulse"></span>
+          </h2>
+          <p class="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
+            I am an entrepreneurial Full Stack Developer and Data Science fresher (CGPA: 9.8) with proven business
+            experience running Arvin Fruits Store and building production-grade web applications.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#projects"
+              class="inline-flex items-center gap-2 rounded-xl bg-brand-500 hover:bg-brand-600 px-6 py-3 font-semibold text-white shadow-lg hover:shadow-glow hover:-translate-y-[1px] transition-all duration-300">
+              Explore Projects <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800/80 px-6 py-3 font-semibold transition-all duration-300">
+              Get in Touch
+            </a>
+          </div>
+
+          <!-- Social Quick Links -->
+          <div class="mt-10 flex items-center gap-5">
+            <span class="text-xs text-slate-400 uppercase tracking-widest font-heading font-semibold">Connect</span>
+            <a href="https://github.com/Dhanraj-kanu" target="_blank"
+              class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition duration-300"
+              aria-label="GitHub">
+              <i data-lucide="github" class="h-5 w-5"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/dhanraj-kanu" target="_blank"
+              class="text-slate-400 hover:text-brand-500 transition duration-300" aria-label="LinkedIn">
+              <i data-lucide="linkedin" class="h-5 w-5"></i>
+            </a>
+            <a href="https://wa.me/9779821902130" target="_blank"
+              class="text-slate-400 hover:text-green-500 transition duration-300" aria-label="WhatsApp">
+              <i data-lucide="message-square" class="h-5 w-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Graphic / Interactive Card -->
+        <div class="md:col-span-5 relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="flex justify-center relative">
+
+            <!-- Glassmorphic Decorative Card Behind Image -->
+            <div
+              class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-500 to-accent-500 opacity-20 blur-xl pointer-events-none">
+            </div>
+
+            <!-- Profile Frame -->
+            <div
+              class="relative rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-2xl glass-card p-3 max-w-sm w-full group">
+              <div class="relative rounded-2xl overflow-hidden aspect-square">
+                <img src="./images/profile.jpg" alt="Dhanraj Kanu"
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+                <!-- Interactive Overlay Grid -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity">
+                </div>
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <div class="font-heading font-bold text-lg">Dhanraj Kanu</div>
+                  <div class="text-xs text-brand-300 font-medium">BCA Data Science @ SRU</div>
+                </div>
+              </div>
+
+              <!-- Quick Mini Card Overlay -->
+              <div
+                class="absolute -right-6 top-1/2 -translate-y-1/2 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md p-3 shadow-lg hidden sm:block max-w-[150px] animate-bounce"
+                style="animation-duration: 4s;">
+                <div class="flex items-center gap-2 mb-1">
+                  <div class="p-1 rounded-lg bg-blue-500/20 text-brand-500">
+                    <i data-lucide="star" class="h-4.5 w-4.5 fill-current"></i>
+                  </div>
+                  <div class="text-[10px] uppercase font-bold text-slate-400">CGPA</div>
+                </div>
+                <div class="font-heading font-extrabold text-xl text-slate-900 dark:text-white">9.800</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Wave Decorator -->
+    <div
+      class="absolute bottom-0 inset-x-0 flex items-center justify-center text-slate-300 dark:text-slate-900 pointer-events-none">
+      <a href="#about"
+        class="flex flex-col items-center gap-1 group py-3 text-slate-400 hover:text-brand-500 transition z-10 pointer-events-auto">
+        <span class="text-xs font-semibold tracking-wider font-heading">Scroll Down</span>
+        <i data-lucide="chevron-down" class="h-4 w-4 animate-bounce"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="py-20 sm:py-28 relative border-t border-slate-200/50 dark:border-slate-800/50">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+      <div class="grid md:grid-cols-12 gap-12 items-start">
+
+        <!-- Sticky Section Header -->
+        <div class="md:col-span-4 md:sticky md:top-24" data-aos="fade-up" data-aos-duration="600">
+          <div class="text-xs text-brand-500 font-heading font-extrabold uppercase tracking-widest mb-2">Introduction
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-heading font-extrabold tracking-tight">About Me</h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs">
+            My background, operational journey, and driving passion for full stack systems and data science.
+          </p>
+
+          <!-- Download CV Container -->
+          <div class="mt-8 p-6 rounded-2xl bg-blue-50/50 dark:bg-slate-900/40 border border-brand-500/10 max-w-xs">
+            <h4 class="font-heading font-bold text-sm mb-2">Need my full CV?</h4>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Read details about my experience, education, and
+              credentials offline.</p>
+            <div class="flex flex-col gap-2">
+              <a href="./DHANRAJ-RESUME (1).pdf" download
+                class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-500 hover:bg-brand-600 px-4 py-2.5 text-xs font-semibold text-white shadow transition-all duration-300">
+                <i data-lucide="file-text" class="h-3.5 w-3.5"></i> Download PDF Resume
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail Panels -->
+        <div class="md:col-span-8 space-y-10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+
+          <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl">
+            <h3 class="font-heading font-bold text-xl mb-4 text-slate-900 dark:text-white">Profile Summary</h3>
+            <p class="leading-relaxed text-slate-600 dark:text-slate-300">
+              I am an entrepreneurial Full Stack Developer and Data Science fresher with proven business experience
+              running Arvin Fruits Store and building production-grade web applications. Skilled in the MERN stack,
+              payment gateway integration, digital marketing, and AI-powered solutions.
+            </p>
+            <p class="mt-4 leading-relaxed text-slate-600 dark:text-slate-300">
+              I demonstrate the ability to ship products, manage operations, and deliver tangible business results.
+              Eager to contribute my problem-solving skills and technical expertise to high-impact development teams in
+              Bengaluru.
+            </p>
+          </div>
+
+          <!-- Academic & Project Statistics Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+
+            <div class="glass-card rounded-2xl p-5 text-center hover:translate-y-[-4px] transition duration-300">
+              <div class="text-2xl sm:text-3xl font-heading font-extrabold text-brand-500">9.80</div>
+              <div class="text-xs font-semibold text-slate-400 mt-1">BCA CGPA</div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 text-center hover:translate-y-[-4px] transition duration-300">
+              <div class="text-2xl sm:text-3xl font-heading font-extrabold text-brand-500">4</div>
+              <div class="text-xs font-semibold text-slate-400 mt-1">Certifications</div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 text-center hover:translate-y-[-4px] transition duration-300">
+              <div class="text-2xl sm:text-3xl font-heading font-extrabold text-brand-500">8+</div>
+              <div class="text-xs font-semibold text-slate-400 mt-1">Projects Built</div>
+            </div>
+
+            <div class="glass-card rounded-2xl p-5 text-center hover:translate-y-[-4px] transition duration-300">
+              <div class="text-2xl sm:text-3xl font-heading font-extrabold text-brand-500">4.8★</div>
+              <div class="text-xs font-semibold text-slate-400 mt-1">Business Rating</div>
+            </div>
+
+          </div>
+
+          <!-- Live GitHub Statistics integration -->
+          <div class="glass-card rounded-3xl p-6">
+            <h3 class="font-heading font-bold text-lg mb-4 flex items-center gap-2 text-slate-900 dark:text-white">
+              <i data-lucide="github" class="h-5 w-5 text-brand-500"></i> GitHub Contributions
+            </h3>
+            <div class="flex justify-center">
+              <a href="https://github.com/Dhanraj-kanu" target="_blank"
+                class="block w-full max-w-md hover:scale-[1.01] transition duration-300">
+                <img class="w-full rounded-2xl drop-shadow-md border border-slate-200/50 dark:border-slate-800/30"
+                  src="https://github-readme-stats.vercel.app/api?username=Dhanraj-kanu&show_icons=true&theme=tokyonight&hide_border=true"
+                  alt="Dhanraj's GitHub Stats" />
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills"
+    class="py-20 sm:py-28 bg-slate-100/50 dark:bg-slate-900/30 border-t border-slate-200/50 dark:border-slate-800/50">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="600">
+        <div class="text-xs text-brand-500 font-heading font-extrabold uppercase tracking-widest mb-2">Technical Core
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold tracking-tight">Skills & Tech Stack</h2>
+        <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">
+          Languages, frameworks, databases, and operational concepts I use to ship production-grade products.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+
+        <!-- Radar Chart Container -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center items-center h-[400px]">
+          <h3 class="font-heading font-extrabold text-lg text-slate-900 dark:text-white mb-4 self-start">Tech Proficiencies</h3>
+          <div class="w-full h-full relative">
+            <canvas id="skillsChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Terminal/IDE Box -->
+        <div class="rounded-xl overflow-hidden bg-[#1e1e1e] shadow-2xl border border-slate-700/50 hover:-translate-y-1 transition-all duration-300 h-[400px] flex flex-col">
+          <!-- Terminal Header -->
+          <div class="bg-[#2d2d2d] px-4 py-2 flex items-center gap-2 border-b border-slate-700">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <div class="ml-4 text-xs text-slate-400 font-code">skills.js - VS Code</div>
+          </div>
+          <!-- Terminal Body -->
+          <div class="p-4 text-sm font-code text-slate-300 overflow-y-auto flex-1 custom-scrollbar leading-loose">
+            <div class="text-blue-400 inline">const</div> <div class="text-sky-300 inline">developer</div> = {<br>
+            &nbsp;&nbsp;<span class="text-sky-200">name:</span> <span class="text-orange-300">'Dhanraj Kanu'</span>,<br>
+            &nbsp;&nbsp;<span class="text-sky-200">role:</span> <span class="text-orange-300">'Full Stack & Data Science'</span>,<br>
+            &nbsp;&nbsp;<span class="text-sky-200">skills:</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-sky-200">frontend:</span> [<span class="text-orange-300">'React'</span>, <span class="text-orange-300">'Next.js'</span>, <span class="text-orange-300">'Tailwind'</span>],<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-sky-200">backend:</span> [<span class="text-orange-300">'Node.js'</span>, <span class="text-orange-300">'Express'</span>, <span class="text-orange-300">'MongoDB'</span>],<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-sky-200">data:</span> [<span class="text-orange-300">'Python'</span>, <span class="text-orange-300">'SQL'</span>, <span class="text-orange-300">'Pandas'</span>]<br>
+            &nbsp;&nbsp;},<br>
+            &nbsp;&nbsp;<span class="text-yellow-200">execute</span>() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">return</span> <span class="text-orange-300">'Building unique tech solutions!'</span><br>
+            &nbsp;&nbsp;}<br>
+            };<br>
+            <br>
+            <span class="text-slate-500">// Ready for new challenges</span><br>
+            <span class="text-sky-300">console</span>.<span class="text-yellow-200">log</span>(developer.<span class="text-yellow-200">execute</span>());<span class="animate-pulse">_</span>
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TIMELINE / JOURNEY SECTION -->
+  <section id="experience" class="py-20 sm:py-28 relative">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-xl mx-auto mb-12" data-aos="fade-up" data-aos-duration="600">
+        <div class="text-xs text-brand-500 font-heading font-extrabold uppercase tracking-widest mb-2">My Journey</div>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold tracking-tight">Experience & Education</h2>
+        <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">
+          A look into my professional background and academic specialization.
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex justify-center gap-4 mb-16" data-aos="fade-up" data-aos-duration="600">
+        <button id="tab-experience-btn" onclick="switchTimeline('experience')"
+          class="rounded-xl px-5 py-2.5 text-sm font-heading font-bold shadow bg-brand-500 text-white border border-brand-500/20 hover:scale-105 transition duration-300">
+          Professional Experience
+        </button>
+        <button id="tab-education-btn" onclick="switchTimeline('education')"
+          class="rounded-xl px-5 py-2.5 text-sm font-heading font-bold bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 text-slate-600 dark:text-slate-300 hover:text-brand-500 hover:scale-105 transition duration-300">
+          Education Timeline
+        </button>
+      </div>
+
+      <!-- EXPERIENCE TIMELINE WRAPPER -->
+      <div id="experience-timeline" class="relative timeline-line" data-aos="fade-up" data-aos-duration="800">
+
+        <!-- Experience Item 1 (Arvin Fruits Store) -->
+        <div class="relative mb-12 md:flex md:justify-between md:items-center">
+          <div
+            class="absolute left-[20px] top-[14px] md:left-1/2 -translate-x-[9px] w-[20px] h-[20px] rounded-full border-[3px] border-brand-500 bg-white dark:bg-surface-dark shadow z-10">
+          </div>
+          <div
+            class="ml-12 md:ml-0 md:w-[45%] glass-card rounded-3xl p-6 sm:p-8 hover:shadow-glow transition duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-[10px] font-heading font-extrabold tracking-widest text-brand-500 bg-brand-500/10 border border-brand-500/20 px-2.5 py-1 rounded-lg uppercase">2025
+                  - Present</span>
+                <span class="text-xs font-semibold text-emerald-500 flex items-center gap-0.5">
+                  <i data-lucide="star" class="h-3.5 w-3.5 fill-current"></i> 4.8★ rating
+                </span>
+              </div>
+              <h3 class="font-heading font-extrabold text-xl text-slate-900 dark:text-white">Founder & Digital Marketing
+                Lead</h3>
+              <h4 class="text-sm font-semibold text-slate-500 mt-1">Arvin Fruits Store</h4>
+              <div class="flex items-center gap-1.5 mt-2 text-xs font-medium text-slate-400">
+                <i data-lucide="map-pin" class="h-3.5 w-3.5"></i> Sunwal, Nepal
+              </div>
+              <ul
+                class="mt-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
+                <li>Built and deployed a responsive Next.js website with SEO optimization, Google Ads strategy, and
+                  Google Business Profile integration.</li>
+                <li>Managed digital campaigns, customer engagement, and online business operations; improved search
+                  visibility and reach.</li>
+                <li><strong>Tech Stack:</strong> Next.js, React, Tailwind CSS, Netlify, Google Ads API.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="hidden md:block w-[45%]"></div>
+        </div>
+
+        <!-- Experience Item 2 (Freelance Developer) -->
+        <div class="relative md:flex md:justify-between md:items-center md:flex-row-reverse">
+          <div
+            class="absolute left-[20px] top-[14px] md:left-1/2 -translate-x-[9px] w-[20px] h-[20px] rounded-full border-[3px] border-slate-300 dark:border-slate-700 bg-white dark:bg-surface-dark shadow z-10">
+          </div>
+          <div
+            class="ml-12 md:ml-0 md:w-[45%] glass-card rounded-3xl p-6 sm:p-8 hover:shadow-glow transition duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-[10px] font-heading font-extrabold tracking-widest text-slate-500 bg-slate-500/10 border border-slate-500/20 px-2.5 py-1 rounded-lg uppercase">2024
+                - Present</span>
+              <span class="text-xs font-semibold text-slate-400">Bengaluru / Remote</span>
+            </div>
+            <h3 class="font-heading font-extrabold text-xl text-slate-900 dark:text-white">Full Stack Web Developer</h3>
+            <h4 class="text-sm font-semibold text-slate-500 mt-1">Freelance Delivery</h4>
+            <div class="flex items-center gap-1.5 mt-2 text-xs font-medium text-slate-400">
+              <i data-lucide="map-pin" class="h-3.5 w-3.5"></i> India & Nepal
+            </div>
+            <ul
+              class="mt-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
+              <li>Building client applications utilizing HTML, CSS, JavaScript, and MERN stack frameworks.</li>
+              <li>Integrating payment APIs (Razorpay) and creating role-based dashboards for store admins and customers.
+              </li>
+              <li>Implementing responsive visual layouts and optimizing sites for rapid load speeds and local search
+                indexes.</li>
+            </ul>
+          </div>
+          <div class="hidden md:block w-[45%]"></div>
+        </div>
+
+      </div>
+
+      <!-- EDUCATION TIMELINE WRAPPER -->
+      <div id="education-timeline" class="relative timeline-line hidden" data-aos="fade-up" data-aos-duration="800">
+
+        <!-- Education Item 1 (SR University) -->
+        <div class="relative mb-12 md:flex md:justify-between md:items-center">
+          <div
+            class="absolute left-[20px] top-[14px] md:left-1/2 -translate-x-[9px] w-[20px] h-[20px] rounded-full border-[3px] border-brand-500 bg-white dark:bg-surface-dark shadow z-10">
+          </div>
+          <div
+            class="ml-12 md:ml-0 md:w-[45%] glass-card rounded-3xl p-6 sm:p-8 hover:shadow-glow transition duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-[10px] font-heading font-extrabold tracking-widest text-brand-500 bg-brand-500/10 border border-brand-500/20 px-2.5 py-1 rounded-lg uppercase">2023
+                - Apr 2026</span>
+              <div class="flex items-center gap-1 text-amber-500 text-xs font-semibold">
+                <i data-lucide="award" class="h-4 w-4"></i> 9.8 CGPA (Top Performer)
+              </div>
+            </div>
+            <h3 class="font-heading font-extrabold text-xl text-slate-900 dark:text-white">Bachelor of Computer
+              Applications</h3>
+            <h4 class="text-sm font-semibold text-slate-500 mt-1">Specialization: Data Science</h4>
+            <div class="flex items-center gap-1.5 mt-2 text-xs font-medium text-slate-400">
+              <i data-lucide="map-pin" class="h-3.5 w-3.5"></i> SR University, Warangal, Telangana
+            </div>
+            <p class="mt-4 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+              Academic Excellence: Top performer in the BCA Data Science program. Focuses on data engineering, analytics
+              with Pandas, predictive modeling, statistical processes, and AI-powered solutions.
+            </p>
+          </div>
+          <div class="hidden md:block w-[45%]"></div>
+        </div>
+
+        <!-- Education Item 2 (Mahakavi Devkota Secondary - 12th) -->
+        <div class="relative mb-12 md:flex md:justify-between md:items-center md:flex-row-reverse">
+          <div
+            class="absolute left-[20px] top-[14px] md:left-1/2 -translate-x-[9px] w-[20px] h-[20px] rounded-full border-[3px] border-slate-300 dark:border-slate-700 bg-white dark:bg-surface-dark shadow z-10">
+          </div>
+          <div
+            class="ml-12 md:ml-0 md:w-[45%] glass-card rounded-3xl p-6 sm:p-8 hover:shadow-glow transition duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-[10px] font-heading font-extrabold tracking-widest text-slate-500 bg-slate-500/10 border border-slate-500/20 px-2.5 py-1 rounded-lg uppercase">2022
+                - 2023</span>
+              <div class="text-xs font-semibold text-slate-500">
+                Score: 62.5%
+              </div>
+            </div>
+            <h3 class="font-heading font-extrabold text-xl text-slate-900 dark:text-white">12th Standard</h3>
+            <h4 class="text-sm font-semibold text-slate-500 mt-1">Focus: Computer Science</h4>
+            <div class="flex items-center gap-1.5 mt-2 text-xs font-medium text-slate-400">
+              <i data-lucide="map-pin" class="h-3.5 w-3.5"></i> Mahakavi Devkota Secondary School
+            </div>
+            <p class="mt-4 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+              Completed secondary education specializing in computer theory and introductory algorithms via the Computer
+              Science curriculum.
+            </p>
+          </div>
+          <div class="hidden md:block w-[45%]"></div>
+        </div>
+
+        <!-- Education Item 3 (Mahakavi Devkota Secondary - 10th) -->
+        <div class="relative md:flex md:justify-between md:items-center">
+          <div
+            class="absolute left-[20px] top-[14px] md:left-1/2 -translate-x-[9px] w-[20px] h-[20px] rounded-full border-[3px] border-slate-300 dark:border-slate-700 bg-white dark:bg-surface-dark shadow z-10">
+          </div>
+          <div
+            class="ml-12 md:ml-0 md:w-[45%] glass-card rounded-3xl p-6 sm:p-8 hover:shadow-glow transition duration-300">
+            <div class="flex items-center justify-between mb-4">
+              <span
+                class="text-[10px] font-heading font-extrabold tracking-widest text-slate-500 bg-slate-500/10 border border-slate-500/20 px-2.5 py-1 rounded-lg uppercase">2020
+                - 2021</span>
+              <div class="text-xs font-semibold text-slate-500">
+                Score: 77.5%
+              </div>
+            </div>
+            <h3 class="font-heading font-extrabold text-xl text-slate-900 dark:text-white">10th Standard SEE</h3>
+            <h4 class="text-sm font-semibold text-slate-500 mt-1">Secondary School Certification</h4>
+            <div class="flex items-center gap-1.5 mt-2 text-xs font-medium text-slate-400">
+              <i data-lucide="map-pin" class="h-3.5 w-3.5"></i> Mahakavi Devkota Secondary School
+            </div>
+            <p class="mt-4 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+              Developed critical reasoning and problem-solving abilities early on, scoring 77.5% on the SEE (Secondary
+              Education Examination).
+            </p>
+          </div>
+          <div class="hidden md:block w-[45%]"></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS SHOWCASE SECTION -->
+  <section id="projects"
+    class="py-20 sm:py-28 bg-slate-100/50 dark:bg-slate-900/30 border-t border-slate-200/50 dark:border-slate-800/50 relative">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <div data-aos="fade-right" data-aos-duration="600">
+          <div class="text-xs text-brand-500 font-heading font-extrabold uppercase tracking-widest mb-2">My Showcase
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-heading font-extrabold tracking-tight">Recent Projects</h2>
+          <p class="mt-2 text-slate-500 dark:text-slate-400 leading-relaxed max-w-md">
+            Click on any card to read technical details, explore source codes, or visit deployments.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap gap-2.5 h-fit" id="projectFilters" data-aos="fade-left" data-aos-duration="600">
+          <button onclick="filterProjects('all')"
+            class="filter-btn active rounded-xl px-4 py-2 text-xs font-heading font-bold shadow bg-brand-500 text-white border border-brand-500/20 hover:scale-105 transition duration-300">All
+            Projects</button>
+          <button onclick="filterProjects('mern')"
+            class="filter-btn rounded-xl px-4 py-2 text-xs font-heading font-bold bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 text-slate-600 dark:text-slate-300 hover:text-brand-500 hover:scale-105 transition duration-300">MERN
+            Stack</button>
+          <button onclick="filterProjects('frontend')"
+            class="filter-btn rounded-xl px-4 py-2 text-xs font-heading font-bold bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 text-slate-600 dark:text-slate-300 hover:text-brand-500 hover:scale-105 transition duration-300">Frontend</button>
+          <button onclick="filterProjects('datascience')"
+            class="filter-btn rounded-xl px-4 py-2 text-xs font-heading font-bold bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 text-slate-600 dark:text-slate-300 hover:text-brand-500 hover:scale-105 transition duration-300">AI
+            & Data</button>
+          <button onclick="filterProjects('business')"
+            class="filter-btn rounded-xl px-4 py-2 text-xs font-heading font-bold bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 text-slate-600 dark:text-slate-300 hover:text-brand-500 hover:scale-105 transition duration-300">Business</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projectGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-duration="800">
+        <!-- Rendered dynamically by script -->
+      </div>
+
+      <!-- Project Modal Frame -->
+      <div id="modal"
+        class="fixed inset-0 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md z-[200] opacity-0 transition-opacity duration-300">
+        <div
+          class="w-full max-w-2xl rounded-3xl bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-2xl border border-slate-200/50 dark:border-slate-800/50 transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto">
+
+          <div class="flex items-center justify-between border-b border-slate-200/60 dark:border-slate-800/60 pb-4">
+            <h3 id="modalTitle" class="text-2xl font-heading font-extrabold text-slate-900 dark:text-white"></h3>
+            <button onclick="closeModal()"
+              class="rounded-xl border border-slate-200/50 dark:border-slate-800/50 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+              <i data-lucide="x" class="h-5 w-5"></i>
+            </button>
+          </div>
+
+          <!-- Modal Image -->
+          <div
+            class="mt-6 rounded-2xl overflow-hidden aspect-video border border-slate-200/50 dark:border-slate-800/50 relative">
+            <img id="modalImg" class="w-full h-full object-cover" src="" alt="Project mockup" />
+          </div>
+
+          <!-- Modal Image Gallery Thumbnails -->
+          <div id="modalGallery" class="mt-3 flex gap-2 overflow-x-auto pb-1 hidden"></div>
+
+          <!-- Tech badges container -->
+          <div id="modalTags" class="mt-6 flex flex-wrap gap-2"></div>
+
+          <!-- Description -->
+          <p id="modalDesc" class="mt-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+
+          <!-- Links -->
+          <div id="modalLinks"
+            class="mt-6 flex flex-wrap gap-3 border-t border-slate-200/50 dark:border-slate-800/50 pt-5">
+            <!-- Rendered dynamically by script -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS SECTION -->
+  <section id="certifications" class="py-20 sm:py-28 relative border-t border-slate-200/50 dark:border-slate-800/50">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="600">
+        <div class="text-xs text-brand-500 font-heading font-extrabold uppercase tracking-widest mb-2">Verified
+          Skillsets</div>
+        <h2 class="text-3xl sm:text-4xl font-heading font-extrabold tracking-tight">Certifications & Achievements</h2>
+        <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">
+          Professional development courses and certificates I have achieved.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-duration="800"
+        data-aos-delay="100">
+
+        <!-- Cert 1 -->
+        <div
+          class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-brand-500/10 text-brand-500">
+                <i data-lucide="award" class="h-5.5 w-5.5"></i>
+              </div>
+              <div>
+                <h3 class="font-heading font-extrabold text-sm text-slate-900 dark:text-white">Deloitte Data Analytics
+                </h3>
+                <h4 class="text-[10px] font-semibold text-slate-400 uppercase">Deloitte Australia</h4>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+              Forage Virtual Experience. Executed exploratory data analysis, data storytelling, and strategic
+              visualizations.
+            </p>
+          </div>
+          <div class="flex flex-col gap-1 border-t border-slate-200/50 dark:border-slate-800/30 pt-3 mt-auto">
+            <span class="text-[10px] text-slate-400 font-medium">Issued June 2026</span>
+            <span class="text-[9px] font-semibold text-slate-400 font-code truncate">ID: 698e1e23721156dbcaf52639</span>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div
+          class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-emerald-500/10 text-brand-500">
+                <i data-lucide="award" class="h-5.5 w-5.5"></i>
+              </div>
+              <div>
+                <h3 class="font-heading font-extrabold text-sm text-slate-900 dark:text-white">GenAI Data Analytics</h3>
+                <h4 class="text-[10px] font-semibold text-slate-400 uppercase">Tata Group via Forage</h4>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+              Completed EDA, risk profiling, AI delinquency prediction, and data storytelling for business collection
+              strategy.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between border-t border-slate-200/50 dark:border-slate-800/30 pt-3 mt-auto">
+            <span class="text-[10px] text-slate-400 font-medium">Issued April 2026</span>
+            <span class="text-[10px] font-bold text-brand-500">Verified</span>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div
+          class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-indigo-500/10 text-brand-500">
+                <i data-lucide="cloud" class="h-5.5 w-5.5"></i>
+              </div>
+              <div>
+                <h3 class="font-heading font-extrabold text-sm text-slate-900 dark:text-white">Networking & Cloud
+                  Computing</h3>
+                <h4 class="text-[10px] font-semibold text-slate-400 uppercase">Microsoft</h4>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+              Theoretical fundamentals of networks, routing systems, network layers, and standard public cloud
+              topologies.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between border-t border-slate-200/50 dark:border-slate-800/30 pt-3 mt-auto">
+            <span class="text-[10px] text-slate-400 font-medium">Coursera Verified</span>
+            <a href="https://www.coursera.org/account/accomplishments/verify/13DY0B67VV3I" target="_blank"
+              class="inline-flex items-center gap-1 text-[10px] font-bold text-brand-500 hover:text-brand-600 transition">
+              Verify <i data-lucide="external-link" class="h-2.5 w-2.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div
+          class="glass-card rounded-3xl p-6 flex flex-col justify-between hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2.5 rounded-xl bg-purple-500/10 text-purple-500">
+                <i data-lucide="check-square" class="h-5.5 w-5.5"></i>
+              </div>
+              <div>
+                <h3 class="font-heading font-extrabold text-sm text-slate-900 dark:text-white">Software Testing &
+                  Validation</h3>
+                <h4 class="text-[10px] font-semibold text-slate-400 uppercase">University of Leeds</h4>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+              Testing paradigms, unit verification metrics, black-box / white-box frameworks, integration validation
+              processes.
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between border-t border-slate-200/50 dark:border-slate-800/30 pt-3 mt-auto">
+            <span class="text-[10px] text-slate-400 font-medium">Coursera Verified</span>
+            <a href="https://www.coursera.org/account/accomplishments/verify/9F2FAHVCWQJH" target="_blank"
+              class="inline-flex items-center gap-1 text-[10px] font-bold text-brand-500 hover:text-brand-600 transition">
+              Verify <i data-lucide="external-link" class="h-2.5 w-2.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact"
+    class="py-20 sm:py-28 bg-slate-100/50 dark:bg-slate-900/30 border-t border-slate-200/50 dark:border-slate-800/50 relative">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+      <div class="grid md:grid-cols-12 gap-12 items-start">
+
+        <!-- Info column -->
+        <div class="md:col-span-5" data-aos="fade-right" data-aos-duration="600">
+          <div class="text-xs text-brand-500 font-heading font-extrabold uppercase tracking-widest mb-2">Let's Connect
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-heading font-extrabold tracking-tight">Get in Touch</h2>
+          <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed max-w-sm">
+            Have an open full stack or data science role in Bengaluru, or want to collaborate on a MERN/Next.js system?
+            Let's connect!
+          </p>
+
+          <!-- Contact items -->
+          <div class="mt-8 space-y-6">
+
+            <div class="flex gap-4 items-center">
+              <div
+                class="h-11 w-11 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Email Address</div>
+                <a href="mailto:dhanrajkanu8848@gmail.com"
+                  class="text-sm font-semibold hover:text-brand-500 transition">dhanrajkanu8848@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-center">
+              <div
+                class="h-11 w-11 rounded-xl bg-green-500/10 text-green-500 flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Mobile Contact</div>
+                <div class="text-sm font-semibold space-y-1">
+                  <a href="tel:+917981048647" class="hover:text-brand-500 block transition">+91 79810 48647</a>
+                  <a href="tel:+9779821902130" class="hover:text-brand-500 block transition">+977 98219 02130</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-center">
+              <div
+                class="h-11 w-11 rounded-xl bg-indigo-500/10 text-brand-500 flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-bold uppercase tracking-wider">Target Location</div>
+                <div class="text-sm font-semibold">Bengaluru, India (Relocating)</div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex gap-4 items-center pt-2">
+              <div class="text-xs text-slate-400 font-bold uppercase tracking-wider mr-2">Social Profiles</div>
+              <div class="flex items-center gap-3">
+                <a href="https://github.com/Dhanraj-kanu" target="_blank" class="h-9 w-9 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-900 hover:text-white dark:hover:bg-brand-500 transition shadow-sm hover:shadow-glow hover:-translate-y-1" aria-label="GitHub">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.03c3.15-.38 6.5-1.4 6.5-7.17A5.1 5.1 0 0 0 19 4.6a4.9 4.9 0 0 0-.5-3.6s-1.4-.4-4.5 2.5a14.7 14.7 0 0 0-8 0C2.9 1 1.5 1 1.5 1a4.9 4.9 0 0 0-.5 3.6 5.1 5.1 0 0 0-1.8 3.19c0 5.76 3.35 6.79 6.5 7.17A4.8 4.8 0 0 0 4.7 18v4"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/dhanraj-kanu" target="_blank" class="h-9 w-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition shadow-sm hover:shadow-glow hover:-translate-y-1" aria-label="LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://www.instagram.com/dhanraj_danny1" target="_blank" class="h-9 w-9 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center text-pink-600 dark:text-pink-400 hover:bg-gradient-to-tr hover:from-yellow-500 hover:via-pink-500 hover:to-purple-500 hover:text-white transition shadow-sm hover:shadow-glow hover:-translate-y-1" aria-label="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://www.facebook.com/dhanraj.kanu" target="_blank" class="h-9 w-9 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-500 hover:bg-blue-700 hover:text-white transition shadow-sm hover:shadow-glow hover:-translate-y-1" aria-label="Facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="md:col-span-7" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <!-- TODO: Replace the form action URL below (xgegpdqy) with your actual Formspree Form ID/endpoint -->
+          <form action="https://formspree.io/f/xaqgewvr" method="POST"
+            class="glass-card rounded-3xl p-6 sm:p-8 shadow-xl space-y-5">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider" for="name">Your
+                  Name</label>
+                <input id="name" name="name" type="text" required placeholder="John Doe"
+                  class="mt-2 w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-900/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" />
+              </div>
+              <div>
+                <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider" for="email">Email
+                  Address</label>
+                <input id="email" name="email" type="email" required placeholder="john@example.com"
+                  class="mt-2 w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-900/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" />
+              </div>
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider" for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required placeholder="Collaboration Opportunity"
+                class="mt-2 w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-900/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-400 uppercase tracking-wider" for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required
+                placeholder="Hi Dhanraj, I'd like to talk to you about..."
+                class="mt-2 w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white/40 dark:bg-slate-900/40 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full rounded-xl bg-brand-500 hover:bg-brand-600 py-3 text-white font-semibold shadow-lg hover:shadow-glow hover:-translate-y-[1px] transition-all duration-300 flex items-center justify-center gap-2">
+              Send Message <i data-lucide="send" class="h-4.5 w-4.5"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200/60 dark:border-slate-800/60 py-10 relative bg-white dark:bg-surface-dark">
+    <div
+      class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-sm">
+      <p class="text-slate-500">&copy; <span id="year"></span> Dhanraj Kanu. All rights reserved.</p>
+
+      <div class="flex items-center gap-6 text-slate-500 font-medium">
+        <a href="#about" class="hover:text-brand-500 transition">About</a>
+        <a href="#projects" class="hover:text-brand-500 transition">Projects</a>
+        <a href="#contact" class="hover:text-brand-500 transition">Contact</a>
+      </div>
+
+      <!-- Fixed Back to Top Arrow -->
+      <a href="#top"
+        class="fixed bottom-6 right-6 h-11 w-11 rounded-xl bg-brand-500 hover:bg-brand-600 text-white flex items-center justify-center shadow-lg hover:shadow-glow hover:-translate-y-1 transition duration-300 z-40"
+        aria-label="Scroll back to top">
+        <i data-lucide="chevron-up" class="h-5 w-5"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DEFINITIONS -->
+  <!-- AOS Scroll animations -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    // --------- Loader Controller ---------
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      if (loader) {
+        loader.classList.add('opacity-0');
+        loader.classList.add('invisible');
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 500);
+      }
+    });
+
+    // --------- Scroll Progress Tracker & Parallax ---------
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      
+      const scrollProgress = document.getElementById('scrollProgress');
+      if (scrollProgress) {
+        scrollProgress.style.width = (winScroll / height) * 100 + "%";
+      }
+
+      // Parallax Items
+      document.querySelectorAll('.parallax-item').forEach(item => {
+        const speed = parseFloat(item.getAttribute('data-speed')) || 0.5;
+        item.style.transform = `translateY(${winScroll * speed}px)`;
+      });
+    });
+
+    // --------- AOS (Animate on Scroll) Init ---------
+    AOS.init({
+      duration: 800,
+      once: true,
+      mirror: false
+    });
+
+    // --------- Typist Role Animation ---------
+    const roles = ["Full Stack Developer 💻", "Data Science Fresher 📊", "MERN Stack Specialist 🚀", "Tech Entrepreneur 🧠"];
+    let roleIdx = 0, charIdx = 0;
+
+    function typingEffect() {
+      if (charIdx < roles[roleIdx].length) {
+        document.getElementById("typing").innerHTML += roles[roleIdx][charIdx];
+        charIdx++;
+        setTimeout(typingEffect, 60);
+      } else {
+        setTimeout(() => {
+          backspaceEffect();
+        }, 2200);
+      }
+    }
+
+    function backspaceEffect() {
+      if (charIdx > 0) {
+        let currentString = roles[roleIdx].substring(0, charIdx - 1);
+        document.getElementById("typing").innerHTML = currentString;
+        charIdx--;
+        setTimeout(backspaceEffect, 30);
+      } else {
+        roleIdx = (roleIdx + 1) % roles.length;
+        setTimeout(typingEffect, 300);
+      }
+    }
+
+    // Start Typing
+    typingEffect();
+
+    // --------- Cursor Follower Logic ---------
+    const follower = document.getElementById('cursor-follower');
+    if (follower) {
+      let mouseX = 0, mouseY = 0;
+      let followerX = 0, followerY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        follower.classList.remove('opacity-0');
+      });
+
+      document.addEventListener('mouseleave', () => {
+        follower.classList.add('opacity-0');
+      });
+
+      function tickCursor() {
+        // Linear interpolation for smoothing lag
+        followerX += (mouseX - followerX) * 0.15;
+        followerY += (mouseY - followerY) * 0.15;
+        follower.style.left = followerX + 'px';
+        follower.style.top = followerY + 'px';
+        requestAnimationFrame(tickCursor);
+      }
+      tickCursor();
+
+      // Magnetic hover effect
+      const interactiveElements = document.querySelectorAll('a, button, input, textarea, .glass-card');
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => follower.classList.add('hover-magnet'));
+        el.addEventListener('mouseleave', () => follower.classList.remove('hover-magnet'));
+      });
+    }
+
+    // --------- Theme Handler ---------
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
+
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        root.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        root.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    function initTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        setTheme(saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+      } else {
+        setTheme('dark'); // Default to dark mode for premium look
+      }
+    }
+
+    initTheme();
+    themeToggle?.addEventListener('click', () => setTheme(root.classList.contains('dark') ? 'light' : 'dark'));
+    themeToggleMobile?.addEventListener('click', () => setTheme(root.classList.contains('dark') ? 'light' : 'dark'));
+
+    // --------- Mobile Navbar Drawer Menu ---------
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      menuIcon.setAttribute('data-lucide', 'menu');
+      lucide.createIcons();
+    }
+
+    menuBtn?.addEventListener('click', () => {
+      const isClosed = mobileMenu.classList.toggle('hidden');
+      if (isClosed) {
+        menuIcon.setAttribute('data-lucide', 'menu');
+      } else {
+        menuIcon.setAttribute('data-lucide', 'x');
+      }
+      lucide.createIcons();
+    });
+    window.closeMenu = closeMenu;
+
+    // --------- Timeline Switcher Logic ---------
+    window.switchTimeline = function (tab) {
+      const expBtn = document.getElementById('tab-experience-btn');
+      const eduBtn = document.getElementById('tab-education-btn');
+      const expTimeline = document.getElementById('experience-timeline');
+      const eduTimeline = document.getElementById('education-timeline');
+
+      if (tab === 'experience') {
+        expBtn.className = 'rounded-xl px-5 py-2.5 text-sm font-heading font-bold shadow bg-brand-500 text-white border border-brand-500/20 hover:scale-105 transition duration-300';
+        eduBtn.className = 'rounded-xl px-5 py-2.5 text-sm font-heading font-bold bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 text-slate-600 dark:text-slate-300 hover:text-brand-500 hover:scale-105 transition duration-300';
+        expTimeline.classList.remove('hidden');
+        eduTimeline.classList.add('hidden');
+      } else {
+        eduBtn.className = 'rounded-xl px-5 py-2.5 text-sm font-heading font-bold shadow bg-brand-500 text-white border border-brand-500/20 hover:scale-105 transition duration-300';
+        expBtn.className = 'rounded-xl px-5 py-2.5 text-sm font-heading font-bold bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 text-slate-600 dark:text-slate-300 hover:text-brand-500 hover:scale-105 transition duration-300';
+        eduTimeline.classList.remove('hidden');
+        expTimeline.classList.add('hidden');
+      }
+
+      setTimeout(() => {
+        if (typeof AOS !== 'undefined') AOS.refresh();
+        lucide.createIcons();
+      }, 50);
+    };
+
+    // --------- Portfolio Projects Data ---------
+    const projects = [
+      {
+        title: 'ShopSphere',
+        category: 'mern',
+        desc: 'A complete full stack MERN e-commerce platform. Features product listings, a shopping cart, secure user authentication, Razorpay payment gateway integration for online transactions, admin dashboard with analytics charts, and an AI-powered chatbot for customer support.',
+        img: './images/shopsphere-home.png',
+        images: ['./images/shopsphere-home.png', './images/shopsphere-products.png', './images/shopsphere-dashboard.png'],
+        tags: ['MERN Stack', 'Razorpay API', 'AI Chatbot', 'JWT Auth', 'MongoDB'],
+        links: { live: 'https://shopsphere-global.vercel.app/', code: 'https://github.com/Dhanraj-kanu/shopsphere' }
+      },
+      {
+        title: 'Tribe',
+        category: 'mern',
+        desc: 'A real-time social media platform built using the MERN stack. Features real-time messaging with Socket.io, user profiles, posts feed with likes/comments, typing indicators, read receipts, and user notifications.',
+        img: './images/tribe1.png',
+        images: [
+          './images/tribe1.png', 
+          './images/tribe2.png', 
+          './images/tribe3.png', 
+          './images/tribe4.png',
+          './images/tribe5.png'
+        ],
+        tags: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'Real-Time'],
+        links: { live: 'https://tribe-social-app.vercel.app', code: 'https://github.com/Dhanraj-kanu' }
+      },
+      {
+        title: 'Arvin Fruits Store',
+        category: 'business',
+        desc: 'Built and deployed a responsive Next.js business website with SEO optimization, a Google Ads strategy, and an integrated Google Business Profile yielding a 4.8★ user rating. Managed digital campaigns, customer engagement, and online operations.',
+        img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop',
+        tags: ['Next.js', 'React.js', 'Tailwind CSS', 'SEO Optimization', 'Netlify'],
+        links: { live: 'https://arvinfruitstore.netlify.app/', code: 'https://github.com/Dhanraj-kanu' }
+      },
+      {
+        title: 'GymPro',
+        category: 'frontend',
+        desc: 'A smart Progressive Web App (PWA) for gym membership management. Features role-based access (Owner, Trainer, Member), subscription plans, digital member QR codes for gym entry, and attendance tracking using vanilla JavaScript and Service Workers.',
+        img: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'PWA', 'Service Workers'],
+        links: { live: 'https://dhanraj-kanu.github.io/gympro/', code: 'https://github.com/Dhanraj-kanu/gympro' }
+      },
+      {
+        title: 'Humanizer',
+        category: 'datascience',
+        desc: 'An AI-powered text processing application built to analyze and humanize generated texts. Intergrates the Anthropic Claude API to adjust readability, natural tone flows, and format structures.',
+        img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=1200&auto=format&fit=crop',
+        tags: ['Anthropic API', 'Claude AI', 'Node.js', 'Text Analytics'],
+        links: { live: '#', code: 'https://github.com/Dhanraj-kanu' }
+      },
+      {
+        title: 'Weather Now',
+        category: 'datascience',
+        desc: 'A weather diagnostics dashboard built in Python. Calls real-time atmospheric APIs, parses temperature indicators and humidity scores, and displays weather information for cities in an interactive interface.',
+        img: './images/weather-project.png',
+        tags: ['Python', 'API Integration', 'TKinter UI', 'Data Parsing'],
+        links: { live: "#' onclick='alert(\"This is a standalone Python application. Click Source Code to download the script and run it locally in your terminal.\"); return false;", code: 'https://github.com/Dhanraj-kanu/Portfolio/blob/main/project/weather_app.py' }
+      },
+      {
+        title: 'Todo Manager',
+        category: 'frontend',
+        desc: 'A personal task planner utilizing vanilla HTML, CSS, and JS. Synchronizes item tasks to client-side localStorage, featuring full keyboard shortcuts / hotkey maps and interactive text search query filters.',
+        img: 'https://images.unsplash.com/photo-1555967522-37949fc21dcb?q=80&w=1200&auto=format&fit=crop',
+        tags: ['HTML5', 'CSS3', 'JavaScript', 'LocalStorage', 'Keyboard Hotkeys'],
+        links: { live: './project/To-Do-List.html', code: 'https://github.com/Dhanraj-kanu/Portfolio/blob/main/project/script.js' }
+      },
+      {
+        title: 'Data Analytics Simulation',
+        category: 'datascience',
+        desc: 'Completed Deloitte Australia and Tata Group data simulations via Forage. Formulated EDA visualizations, risk profiling, AI delinquency forecasting, and comprehensive data stories for collection strategies.',
+        img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+        tags: ['Data Analytics', 'EDA', 'GenAI', 'Predictive Modeling'],
+        links: { live: '#', code: 'https://github.com/Dhanraj-kanu' }
+      }
+    ];
+
+    // Render cards & Filter logic
+    const grid = document.getElementById('projectGrid');
+
+    window.filterProjects = function (category) {
+      grid.innerHTML = '';
+      let delay = 0;
+
+      // Update active filter button style
+      document.querySelectorAll('#projectFilters button').forEach(btn => {
+        if (btn.getAttribute('onclick').includes(`('${category}')`)) {
+          btn.className = 'filter-btn active rounded-xl px-4 py-2 text-xs font-heading font-bold shadow bg-brand-500 text-white border border-brand-500/20 hover:scale-105 transition duration-300';
+        } else {
+          btn.className = 'filter-btn rounded-xl px-4 py-2 text-xs font-heading font-bold bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/50 text-slate-600 dark:text-slate-300 hover:text-brand-500 hover:scale-105 transition duration-300';
+        }
+      });
+
+      projects
+        .filter(p => category === 'all' || p.category === category)
+        .forEach(p => {
+          const originalIdx = projects.indexOf(p);
+          const card = document.createElement('article');
+
+          card.className = 'glass-card neon-border group cursor-pointer rounded-3xl overflow-hidden shadow-md hover:shadow-glow hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between';
+          card.setAttribute('data-aos', 'fade-up');
+          card.setAttribute('data-aos-delay', String(delay));
+          delay += 100;
+
+          card.innerHTML = `
+            <div>
+              <div class="overflow-hidden aspect-video relative">
+                <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 ease-out"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent"></div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors">${p.title}</h3>
+                <p class="mt-2.5 text-xs sm:text-sm text-slate-500 dark:text-slate-400 line-clamp-2 leading-relaxed">${p.desc}</p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 mt-auto">
+              <div class="flex flex-wrap gap-1.5 text-[10px] font-heading font-semibold text-slate-500">
+                ${p.tags.slice(0, 3).map(t => `<span class='px-2 py-1 rounded-md bg-slate-200/50 dark:bg-slate-800/40'>${t}</span>`).join('')}
+                ${p.tags.length > 3 ? `<span class='px-2 py-1 rounded-md bg-brand-500/10 text-brand-500'>+${p.tags.length - 3}</span>` : ''}
+              </div>
+            </div>`;
+
+          card.addEventListener('click', () => openModal(originalIdx));
+          grid.appendChild(card);
+        });
+
+      // Refresh animations and icons
+      setTimeout(() => {
+        if (typeof AOS !== 'undefined') AOS.refresh();
+        lucide.createIcons();
+        if (typeof VanillaTilt !== 'undefined') {
+          VanillaTilt.init(grid.querySelectorAll(".glass-card"), {
+            max: 5,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.1,
+          });
+        }
+      }, 50);
+    };
+
+    // Render all projects on start
+    filterProjects('all');
+
+    // --------- Project Details Modal Controller ---------
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalImg = document.getElementById('modalImg');
+    const modalTags = document.getElementById('modalTags');
+    const modalLinks = document.getElementById('modalLinks');
+
+    function openModal(idx) {
+      const p = projects[idx];
+      modalTitle.textContent = p.title;
+      modalDesc.textContent = p.desc;
+      modalImg.src = p.img;
+
+      // Gallery Thumbnails
+      const gallery = document.getElementById('modalGallery');
+      if (p.images && p.images.length > 0) {
+        gallery.classList.remove('hidden');
+        gallery.innerHTML = p.images.map((imgSrc, i) => `
+          <button onclick="changeModalImage('${imgSrc}', this)" class="h-14 w-24 rounded-lg overflow-hidden border-2 ${imgSrc === p.img ? 'border-brand-500' : 'border-transparent'} hover:border-brand-500/50 transition duration-300 focus:outline-none shrink-0">
+            <img src="${imgSrc}" class="w-full h-full object-cover" alt="Thumbnail ${i + 1}" />
+          </button>
+        `).join('');
+      } else {
+        gallery.classList.add('hidden');
+        gallery.innerHTML = '';
+      }
+
+      // Tags
+      modalTags.innerHTML = p.tags.map(t => `<span class='px-2.5 py-1 text-xs font-heading font-semibold rounded-lg bg-slate-200/50 dark:bg-slate-800/40 text-slate-600 dark:text-slate-300'>${t}</span>`).join('');
+
+      // Links
+      modalLinks.innerHTML = '';
+      if (p.links?.live && p.links.live !== '#') {
+        modalLinks.innerHTML += `
+          <a target="_blank" href='${p.links.live}' class='rounded-xl bg-brand-500 hover:bg-brand-600 px-5 py-2.5 text-xs font-bold text-white shadow-lg hover:shadow-glow transition flex items-center gap-1.5'>
+            <i data-lucide="globe" class="h-4 w-4"></i> Live Demo
+          </a>`;
+      }
+      if (p.links?.code && p.links.code !== '#') {
+        modalLinks.innerHTML += `
+          <a target="_blank" href='${p.links.code}' class='rounded-xl border border-slate-200/60 dark:border-slate-800 px-5 py-2.5 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-1.5'>
+            <i data-lucide="github" class="h-4 w-4"></i> Source Code
+          </a>`;
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      // Animate opening
+      setTimeout(() => {
+        modal.classList.add('opacity-100');
+        modal.firstElementChild.classList.remove('scale-95');
+        modal.firstElementChild.classList.add('scale-100');
+        lucide.createIcons();
+      }, 50);
+    }
+
+    window.changeModalImage = function (imgSrc, btn) {
+      document.getElementById('modalImg').src = imgSrc;
+      if (btn) {
+        const buttons = btn.parentElement.querySelectorAll('button');
+        buttons.forEach(b => b.classList.remove('border-brand-500'));
+        btn.classList.add('border-brand-500');
+      }
+    };
+
+    function closeModal() {
+      modal.classList.remove('opacity-100');
+      modal.firstElementChild.classList.remove('scale-100');
+      modal.firstElementChild.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }, 300);
+    }
+
+    window.closeModal = closeModal;
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // --------- Footer Year ---------
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lucide Initial Call
+    lucide.createIcons();
+
+    // --------- Initialize Particles.js ---------
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 60,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#3b82f6"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          }
+        },
+        "opacity": {
+          "value": 0.4,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#3b82f6",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+
+    // --------- Initialize Chart.js ---------
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    const isDark = document.documentElement.classList.contains('dark');
+    const chartColor = isDark ? 'rgba(255, 255, 255, 0.7)' : 'rgba(15, 23, 42, 0.7)';
+    const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(15, 23, 42, 0.1)';
+    
+    new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['React/Next.js', 'Node.js', 'Python/Pandas', 'SQL/MongoDB', 'Tailwind CSS', 'System Design'],
+        datasets: [{
+          label: 'Proficiency %',
+          data: [85, 75, 80, 80, 90, 75],
+          backgroundColor: 'rgba(59, 130, 246, 0.2)',
+          borderColor: 'rgba(59, 130, 246, 1)',
+          pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgba(59, 130, 246, 1)',
+          borderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            angleLines: { color: gridColor },
+            grid: { color: gridColor },
+            pointLabels: { color: chartColor, font: { family: "'Space Grotesk', monospace", size: 12 } },
+            ticks: { display: false, min: 0, max: 100 }
+          }
+        },
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+
+    // --------- Initialize 3D Tilt Effect ---------
+    VanillaTilt.init(document.querySelectorAll(".glass-card, .rounded-xl"), {
+      max: 5,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.1,
+    });
+  </script>
+</body>
+
+</html>
